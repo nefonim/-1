@@ -6,6 +6,11 @@ executable(
 		'src/main.cpp',
 		'src/Publication.cpp',
 		'src/Book.cpp',
+		'src/book/Fiction.cpp',
+		'src/book/Novel.cpp',
+		'src/book/Poem.cpp',
+		'src/attrs/FullName.cpp',
+		'src/attrs/Lifespan.cpp',
 	],
 	include_directories: [
 		'src',

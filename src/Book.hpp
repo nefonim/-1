@@ -9,6 +9,6 @@ public:
 	const std::string &get_name() const;
 	virtual void about_author(std::ostream &out) const = 0;
 
-	explicit Book(std::string &&name);
+	explicit Book(std::string name);
 	virtual ~Book();
 };

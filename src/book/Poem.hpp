@@ -1,0 +1,18 @@
+#pragma once
+
+#include "Book.hpp"
+#include "attrs/FullName.hpp"
+#include "attrs/Lifespan.hpp"
+#include "collections/Array.hpp"
+
+namespace book {
+	struct Poem final : public Book {
+		attrs::FullName author;
+		attrs::Lifespan lifespan;
+		Array<std::string> notable_works;
+		Poem(std::string name, attrs::FullName author,
+		     attrs::Lifespan author_lifespan, Array<std::string> notable_works);
+		~Poem();
+		void about_author(std::ostream &out) const final;
+	};
+}
