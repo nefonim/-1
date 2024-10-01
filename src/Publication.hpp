@@ -13,9 +13,11 @@ public:
 	explicit Publication();
 	~Publication();
 
-	const Book *current();
-	const Book *next();
-	const Book *prev();
+	void operator=(Publication &&);
+
+	const Book *current() const;
+	const Book *next() const;
+	const Book *prev() const;
 
 	void scroll_next();
 	void scroll_prev();
@@ -25,6 +27,6 @@ public:
 
 	void clear();
 
-	void load(std::istream &file);
-	void store(std::ostream &file);
+	bool load(std::istream &file);
+	void store(std::ostream &file) const;
 };
